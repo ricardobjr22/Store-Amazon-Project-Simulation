@@ -1,4 +1,0 @@
-2
-****
-1|1|laptop lenovo|Tecnologia|1537.5|40|7|0.0|C:/Users/elric/Downloads/279696564_534432111472318_2497685412216027409_n.jpg|
-2|1|tennies nike|Calzado|450.0|37|30|2.0|C:/Users/elric/Downloads/Captura de pantalla 2022-05-18 001647.png|
