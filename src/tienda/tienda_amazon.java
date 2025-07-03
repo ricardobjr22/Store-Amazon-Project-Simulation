@@ -1733,10 +1733,21 @@ public class tienda_amazon extends javax.swing.JFrame {
             ruta = file.getSelectedFile().getPath();
             name = file.getSelectedFile().getName();
         }
+
+        String destino = "imagenes/" + name;
+    
+        File carpeta = new File("imagenes");
+        carpeta.mkdirs();
+    
+        Files.copy(
+            Paths.get(ruta),
+            Paths.get(destino),
+            StandardCopyOption.REPLACE_EXISTING
+        );
+    
+        pathImage = destino;
         
-        pathImage = "C:/Users/elric/Downloads/" + name;
-        
-        Image imagen = new ImageIcon(ruta).getImage();
+        Image imagen = new ImageIcon(destino).getImage();
         ImageIcon icono = new ImageIcon(imagen.getScaledInstance(lblImagen.getWidth(), lblImagen.getHeight(), Image.SCALE_SMOOTH));
         lblImagen.setIcon(icono);
     }//GEN-LAST:event_btnAgregarFotoActionPerformed
@@ -2109,7 +2120,7 @@ public class tienda_amazon extends javax.swing.JFrame {
                 BodyPart texto = new MimeBodyPart();
                 texto.setText("Factura de compra: ");
                 BodyPart adjunto = new MimeBodyPart();
-                adjunto.setDataHandler(new DataHandler(new FileDataSource("C:/Users/elric/OneDrive/Documentos/NetBeansProjects/Tienda_Amazon_1/Tienda_Amazon/" + txtPropietario.getText() + ".pdf")));
+                adjunto.setDataHandler(new DataHandler(new FileDataSource(txtPropietario.getText() + ".pdf")));
                 adjunto.setFileName(txtPropietario.getText() + ".pdf");
                 MimeMultipart m = new MimeMultipart();
                 m.addBodyPart(texto);
