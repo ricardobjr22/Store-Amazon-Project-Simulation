@@ -1,5 +1,0 @@
-3
-****
-1|juan|ramirez|arce|Vendedor|juan2208|12345|2.0|
-2|Pedro|marquez|ruiz|Comprador|pedro2208|12345|0|
-3|Jonathan|Acevez|Lopez|Comprador|JAL|12345|0|
