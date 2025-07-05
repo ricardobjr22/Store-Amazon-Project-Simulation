@@ -2103,7 +2103,7 @@ public class tienda_amazon extends javax.swing.JFrame {
             pdf.generar(txtPropietario.getText(), "qr.png", 300, 300);
             
             String correo = "hosttiendita2208@gmail.com";
-                String contraseña = "xcnnricfpenxyzty";
+                String contraseña = "";
                 String emailDest = "compradortiendita2208@gmail.com";
                 
                 Properties p = new Properties();
